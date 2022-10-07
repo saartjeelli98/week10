@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="week10.css">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+        <title>Books Checked Out</title>
+    </head>
+    <body class="container-fluid">
+        <div class="row">
+            <div class="col"> <!--to hold the navbar-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-info">
+                    <a class="navbar-brand text-white" href="#">Public Library</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#">Catalog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Books Checked Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <br><br><br>
+        <h4>Check Out a New Book!</h4> 
+        <div class="row">
+            <div class="col-sm"> <!--to hold the form-->
+                <div class="form-group">
+                    <label for="bookNumber">Number</label>
+                    <input type="text" class="form-control" id="bookNumber">
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="authorName">Author</label>
+                    <input type="text" class="form-control" id="authorName">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title">
+            </div>
+            <div class="col-sm">
+                <label for="date">Date Checked Out</label>
+                <input type="date" class="form-control" id="date">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm">
+                <button id="finish" class="btn btn-info form-control">Finish</button>
+            </div>
+        </div>
+        <br><br>
+        <h4>Your Books</h4>
+        <br>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8"> <!--to hold the table-->
+                <table class="table" id="books"> 
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Author</th>
+                            <th>Title</th>
+                            <th>Date Checked Out</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Jane Harper</td>
+                            <td>The Lost Man</td>
+                            <td>6/20/2022</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Julia Alvarez</td>
+                            <td>In the Name of Salome</td>
+                            <td>6/29/2022</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Louise Erdrich</td>
+                            <td>The Round House</td>
+                            <td>7/15/2022</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="week10.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
+</html>
